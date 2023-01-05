@@ -108,3 +108,9 @@ input{
 .red{
     color: rgb(235, 106, 106);
 }
+
+/*   FOOTER   */
+
+footer{
+    background-color: white;
+}
