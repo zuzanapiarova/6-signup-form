@@ -21,12 +21,28 @@
           <strong>Try it free 7 days</strong> then $20/mo. thereafter
         </div>
         <div class="fields">
-          <form>
-            <input type="text" placeholder="First Name" required>
-            <input type="text" placeholder="Last Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
-            <input class='button' type="submit" value="Claim your free trial">
+          <form id="form" novalidate> <!-- novalidate attribute in form disables default browser/device HTML5 form validation-->
+            <div class="field">
+              <input id="firstName" type="text" placeholder="First Name" required >
+              <img class='error-icon' src="./images/icon-error.svg"/>
+              <div class="error-message">error</div>
+            </div>
+            <div class="field">
+              <input id="lastName" type="text" placeholder="Last Name" required >
+              <img class='error-icon' src="./images/icon-error.svg"/>
+              <div class="error-message">error</div>
+            </div>
+            <div class="field">
+              <input id="email" type="email" placeholder="Email Address" required>
+              <img class='error-icon' src="./images/icon-error.svg"/>
+              <div class="error-message">error</div>
+            </div>
+            <div class="field">
+              <input id="password" type="password" placeholder="Password" required>
+              <img class='error-icon' src="./images/icon-error.svg"/>
+              <div class="error-message">error</div>
+            </div>
+            <input id='button' class='button' type="submit" value="Claim your free trial" onClick=checkInputs();>   <!-- when using a function as action for event listener must use () after to call it -->
           </form>
           <p class="terms">By clicking the button, you are agreeing to our <strong class='red'>Terms and Services</strong>.</p>
         </div>
@@ -39,5 +55,6 @@
       Coded by <a href="https://github.com/zuzanapiarova" target="_blank">zuzanapiarova</a>.
     </p>
   </footer>
+  <script src="./main.js"></script>
 </body>
 </html>
