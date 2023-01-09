@@ -6,18 +6,22 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Mukta', sans-serif;
+    font-size: 1rem;
 }
 
 body{
     background-image: url('./images/bg-intro-desktop.png');
     background-color: rgb(235, 111, 111);
+
 }
 
-.content{
-    min-height: 100vh;
+main{
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2em;
+    min-height: 100vh;
 }
 
 /*   LEFT SIDE   */
@@ -31,14 +35,14 @@ body{
 }
 
 h1{
-    font-size: 56px;
+    font-size: 4em;
     font-weight: 800;
     line-height: 1em;
-    margin-bottom: 50px;
+    margin-bottom: 0.5em;
 }
 
 h4{
-    font-size: 18px;
+    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -46,7 +50,7 @@ h4{
 
 .information{
     width: 50%;
-    margin-right: 40px;
+    margin-right: 4em;
     color: white;
 }
 
@@ -57,8 +61,8 @@ h4{
 .banner{
     background-color: rgb(116, 83, 156);
     color: white;
-    margin-bottom: 16px;
-    padding: 16px;
+    margin-bottom: 2em;
+    padding: 1em;
     border-radius: 8px;
     box-shadow: 2px 5px 1px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -66,31 +70,29 @@ h4{
 
 .fields{
     background-color: white;
-    padding: 16px;
+    padding: 1em;
     border-radius: 8px;
     box-shadow: 2px 10px 2px rgba(0, 0, 0, 0.2);
-    padding-right: 50px;
 }
 
 form{
-    list-style-type: none;
-    text-decoration: none;
     display: flex;
     flex-direction: column;
 }
 
+
 .field{
     position: relative;
-}
+} 
 
 input{
-    padding: 12px;
-    margin: 16px;
+    padding: 1em;
+    margin: 1em 0;
     border: 1px solid lightgrey;
     color: grey;
     border-radius: 5px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.8em;
     width: 100%;
 }
 
@@ -98,18 +100,18 @@ input{
 
 .error-message{
     position:absolute;
-    top: 65px;
-    left: 20px;
+    top: 5.4em;
+    right: 0;
     color:rgb(235, 111, 111);
     font-style: italic;
-    font-size: 12px;
+    font-size: 0.7em;
     visibility: hidden;
 }
 
 .error-icon{
     position: absolute;
-    bottom: 30px;
-    right: -2px;
+    bottom: 1.8em;
+    right: 1em;
     visibility: hidden;
 }
 
@@ -122,8 +124,8 @@ input{
 
 @keyframes moveErrorIcon{  
     0% {transform: translateX(0);}
-    25% {transform: translateX(2px);}
-    75% {transform: translateX(-2px);}
+    25% {transform: translateX(0.2em);}
+    75% {transform: translateX(-0.2em);}
    100% {transform: translateX(0);}
 }
 
@@ -131,7 +133,7 @@ input{
     border-color: rgb(237, 119, 119);
 }
  
-/*
+/*   done with js
 .field.error .error-icon{
     visibility: visible;
 }
@@ -145,7 +147,7 @@ input{
     border-color: lightgray;
 }
 
-/*
+/*   done with js 
 .field.success .error-icon{
     visibility:hidden;
 }
@@ -158,11 +160,11 @@ input{
 /*button*/ 
 
 .button{
-    background-color: rgb(86, 173, 86);
+    background-color: rgb(91, 180, 119);
     text-transform: uppercase;
     color: white;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em;
     letter-spacing: 0.2em;
 }
 
@@ -171,23 +173,59 @@ input{
 }
 
 .button:active{
-    background-color: darkgreen;
+    background-color: rgb(128, 205, 152);;
 }
 
 .terms{
-    font-size: 10px;
+    font-size: 0.6em;
     color: darkgray;
-    padding: 0 16px;
+    padding: 0 1em;
     text-align: center;
-
 }
 
 .red{
     color: rgb(235, 106, 106);
+    font-size: 1em;
 }
 
 /*   FOOTER   */
 
 footer{
     background-color: white;
+    text-align: end;
+}
+
+
+/*   PHONE   */
+@media (max-width: 1000px){
+
+    .container{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .information{
+        width: 100%;
+        margin: 4em 0;
+        text-align: center;
+    }
+
+    h1{
+        margin-bottom: 1em;
+        font-size: 2em;
+    }
+
+    h4{
+        font-size: 1.2em;
+    }
+
+    .form{
+        width: 100%;
+        margin-bottom: 4em;
+    }
+
+    .button{
+        font-size: 0.8em;
+        letter-spacing: normal;
+    }
 }

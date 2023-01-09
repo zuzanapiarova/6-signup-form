@@ -41,11 +41,17 @@ function setSuccess(element){
     errorIcon.style.visibility = 'hidden'; 
 }
 
+function validEmail (email) {
+    re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  //re = regular expression
+    return re.test(String(email).toLowerCase());
+}
+
 function checkInputs (){
     const firstNameValue = firstName.value.trim(); // .trim() removes spaces, so if only spaces are typed in the input it is considered empty
     const lastNameValue = lastName.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
+    // const password2Value = password2.value.trim();
 
     if (firstNameValue === ''){
         setError (firstName, 'First name cannot be empty')
@@ -61,6 +67,8 @@ function checkInputs (){
 
     if (emailValue === ''){
         setError(email, 'Email cannot be empty')
+    } else if (!validEmail(emailValue)){
+        setError(email, 'Looks like this is not an email')
     } else {
         setSuccess(email);
     };
@@ -69,6 +77,17 @@ function checkInputs (){
         setError(password, 'Password cannot be empty')
     } else {
         setSuccess(password);
+
+    /*   if we have a repeat password input - passwords must match:
+
+    if (password2Value === ''){
+        setError(passsword2, 'Please repeat your password')
+    } else if (password2Value !== passwordValue){
+        setError(password2, 'Passwords must match')
+    } else {
+        setSuccess(password2);
+    };
+     */
     };
 } 
 
