@@ -1,8 +1,7 @@
-This is Frontend Mentor challenge - Intro component with sign up form solution
+#2 Frontend Mentor challenge - Intro component with sign up form solution
 
 Challenge: 
   users should be able to:
-
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Receive an error message when the `form` is submitted if:
@@ -20,4 +19,5 @@ Built with
 - Flexbox
 
 What I learned:
-Got new knowledge about forms and input elements, want to get into how to handle forms in javascript
+Learned a lot about forms in HTML, how to write validation errors in JS and how to style our own validation errors in CSS - some of my new knowledge is commented directly in the files. 
+From feedback on my my last project on Frontend Mentor I started using em/rem units instead of px, and tried using HTML landmarks better. 
